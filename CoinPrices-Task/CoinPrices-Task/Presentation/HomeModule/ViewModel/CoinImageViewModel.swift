@@ -15,25 +15,35 @@ class CoinImageViewModel: ObservableObject {
     @Published var isLoading: Bool = true
     
     private let coin: CoinModel
-    private let dataService: CoinImageService
-    private var cancellables = Set<AnyCancellable>()
+    var subscriptions = Set<AnyCancellable>()
+
     
     init(coin: CoinModel) {
         self.coin = coin
-        self.dataService = CoinImageService(coin: coin)
         self.addSubscribers()
         self.isLoading = true
     }
     
     private func addSubscribers() {
-         
-        dataService.$image
-            .sink { [weak self] (_) in
-                self?.isLoading = false
-            } receiveValue: { (returnedImage) in
-                self.image = returnedImage
+        self.isLoading = true
+        let service = CoinsService(networkRequest: NativeRequestable(), environment: .development)
+        service.getCoinImage(self.coin.image)
+            .tryMap({ (data) -> UIImage? in
+                return UIImage(data: data)
+            })
+            .sink { (completion) in
+                self.isLoading = false
+                switch completion {
+                case .failure(let error):
+                    print("oops got an error \(error.localizedDescription)")
+                case .finished:
+                    print("nothing much to do here")
+                }
+            } receiveValue: { (downloadedImage) in
+                self.image = downloadedImage
+                print("got my response here \(String(describing: downloadedImage))")
             }
-            .store(in: &cancellables)
+            .store(in: &subscriptions)
     }
 }
 

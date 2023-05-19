@@ -12,32 +12,12 @@ class HomeViewModel: ObservableObject {
     
     @Published var allCoins: [CoinModel] = []
     @Published var isLoading:Bool = false
-    // @Published var searchText: String = ""
-    
-    // private let dataService = CoinDataService()
-    // private var cancellables = Set<AnyCancellable>()
-    
+
     var subscriptions = Set<AnyCancellable>()
     
-    
     init() {
-        // addSubscribers()
         getCoinsPrices()
     }
-    
-    //    func addSubscribers() {
-    //        self.isLoading = true
-    //        //updates allCoins
-    //        $searchText
-    //            .combineLatest(dataService.$allCoins)
-    //            .debounce(for: .seconds(0.5), scheduler: DispatchQueue.main)
-    //            .map(filterCoins)
-    //            .sink { [weak self] (returnedCoins) in
-    //                self?.isLoading = false
-    //                self?.allCoins = returnedCoins
-    //            }
-    //            .store(in: &cancellables)
-    //    }
     
     func getCoinsPrices() {
         self.isLoading = true
@@ -57,18 +37,4 @@ class HomeViewModel: ObservableObject {
             }
             .store(in: &subscriptions)
     }
-    
-    //    private func filterCoins(text: String, coins: [CoinModel]) -> [CoinModel] {
-    //        guard !text.isEmpty else {
-    //            return coins
-    //        }
-    //
-    //        let lowercasedText = text.lowercased()
-    //
-    //        return coins.filter { (coin) -> Bool in
-    //            return coin.name.lowercased().contains(lowercasedText) ||
-    //            coin.symbol.lowercased().contains(lowercasedText) ||
-    //            coin.id.lowercased().contains(lowercasedText)
-    //        }
-    //    }
 }

@@ -9,12 +9,16 @@ import SwiftUI
 
 @main
 struct CoinPrices_TaskApp: App {
-    let persistenceController = PersistenceController.shared
-
+    
+    @StateObject private var vm = HomeViewModel()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            NavigationView {
+                HomeView()
+                    .navigationBarHidden(false)
+            }
+            .environmentObject(vm)
         }
     }
 }

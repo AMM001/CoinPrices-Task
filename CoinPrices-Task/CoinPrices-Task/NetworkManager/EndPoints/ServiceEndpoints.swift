@@ -12,6 +12,7 @@ enum ServiceEndpoints {
     
   // organise all the end points here for clarity
     case getCoinsPrices
+    case getCoinImage(_ imageName:String)
   
   // gave a default timeout but can be different for each.
     var requestTimeOut: Int {
@@ -21,7 +22,7 @@ enum ServiceEndpoints {
   //specify the type of HTTP request
     var httpMethod: HTTPMethod {
         switch self {
-        case .getCoinsPrices:
+        case .getCoinsPrices , .getCoinImage:
             return .GET
         }
     }
@@ -37,7 +38,7 @@ enum ServiceEndpoints {
   // encodable request body for POST
     var requestBody: Encodable? {
         switch self {
-        case .getCoinsPrices:
+        case .getCoinsPrices , .getCoinImage:
             return nil
         }
     }
@@ -48,6 +49,8 @@ enum ServiceEndpoints {
         switch self {
         case .getCoinsPrices:
             return baseUrl
+        case .getCoinImage(let imageName):
+            return imageName
         }
     }
 }
