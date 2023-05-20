@@ -5,15 +5,7 @@ target 'CoinPrices-Task' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for CoinPrices-Task
+   pod 'Kingfisher'
 
-  target 'CoinPrices-TaskTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-  target 'CoinPrices-TaskUITests' do
-    # Pods for testing
-  end
 
 end

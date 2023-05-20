@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		75C0742EC61325D7743D3443 /* Pods_CoinPrices_Task.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4455F86197850B806FDC906 /* Pods_CoinPrices_Task.framework */; };
 		84B54AD12A18058D00493E7F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B54ACF2A18058D00493E7F /* ContentView.swift */; };
 		84B54AD22A18058D00493E7F /* CoinPrices_TaskApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B54AD02A18058D00493E7F /* CoinPrices_TaskApp.swift */; };
-		84B54AD42A182ADC00493E7F /* LocalFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B54AD32A182ADC00493E7F /* LocalFileManager.swift */; };
 		84D63A0B2A17E83300E2BE8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84D63A0A2A17E83300E2BE8D /* Assets.xcassets */; };
 		84D63A0E2A17E83300E2BE8D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84D63A0D2A17E83300E2BE8D /* Preview Assets.xcassets */; };
 		84D63A102A17E83300E2BE8D /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D63A0F2A17E83300E2BE8D /* Persistence.swift */; };
@@ -23,7 +23,6 @@
 		84DD26FC2A17EE55003C329A /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DD26FB2A17EE55003C329A /* HomeViewModel.swift */; };
 		84DD26FF2A17EEC9003C329A /* CoinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DD26FE2A17EEC9003C329A /* CoinModel.swift */; };
 		84DD27032A17EF4C003C329A /* CoinImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DD27022A17EF4C003C329A /* CoinImageView.swift */; };
-		84DD27052A17EF9C003C329A /* CoinImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DD27042A17EF9C003C329A /* CoinImageViewModel.swift */; };
 		84DD27092A17F2C4003C329A /* RequestableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DD27082A17F2C4003C329A /* RequestableProtocol.swift */; };
 		84DD270B2A17F2E0003C329A /* NativeRequestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DD270A2A17F2E0003C329A /* NativeRequestable.swift */; };
 		84DD270E2A17F325003C329A /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DD270D2A17F325003C329A /* NetworkRequest.swift */; };
@@ -52,9 +51,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		05363A8996F8AEBD58D963BE /* Pods-CoinPrices-Task.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoinPrices-Task.debug.xcconfig"; path = "Target Support Files/Pods-CoinPrices-Task/Pods-CoinPrices-Task.debug.xcconfig"; sourceTree = "<group>"; };
 		84B54ACF2A18058D00493E7F /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = "CoinPrices-Task/ContentView.swift"; sourceTree = "<group>"; };
 		84B54AD02A18058D00493E7F /* CoinPrices_TaskApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoinPrices_TaskApp.swift; path = "CoinPrices-Task/CoinPrices_TaskApp.swift"; sourceTree = "<group>"; };
-		84B54AD32A182ADC00493E7F /* LocalFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFileManager.swift; sourceTree = "<group>"; };
 		84D63A032A17E83000E2BE8D /* CoinPrices-Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CoinPrices-Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84D63A0A2A17E83300E2BE8D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84D63A0D2A17E83300E2BE8D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -71,7 +70,6 @@
 		84DD26FB2A17EE55003C329A /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		84DD26FE2A17EEC9003C329A /* CoinModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinModel.swift; sourceTree = "<group>"; };
 		84DD27022A17EF4C003C329A /* CoinImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinImageView.swift; sourceTree = "<group>"; };
-		84DD27042A17EF9C003C329A /* CoinImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinImageViewModel.swift; sourceTree = "<group>"; };
 		84DD27082A17F2C4003C329A /* RequestableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestableProtocol.swift; sourceTree = "<group>"; };
 		84DD270A2A17F2E0003C329A /* NativeRequestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeRequestable.swift; sourceTree = "<group>"; };
 		84DD270D2A17F325003C329A /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
@@ -80,6 +78,8 @@
 		84DD27152A17F504003C329A /* CoinsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinsService.swift; sourceTree = "<group>"; };
 		84DD27182A17FB17003C329A /* PreviewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProvider.swift; sourceTree = "<group>"; };
 		84DD271A2A17FB84003C329A /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
+		8D682B04E14841FCB53C1CB5 /* Pods-CoinPrices-Task.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoinPrices-Task.release.xcconfig"; path = "Target Support Files/Pods-CoinPrices-Task/Pods-CoinPrices-Task.release.xcconfig"; sourceTree = "<group>"; };
+		E4455F86197850B806FDC906 /* Pods_CoinPrices_Task.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoinPrices_Task.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75C0742EC61325D7743D3443 /* Pods_CoinPrices_Task.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,6 +108,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1BFBF5334461C3003F243BCB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				05363A8996F8AEBD58D963BE /* Pods-CoinPrices-Task.debug.xcconfig */,
+				8D682B04E14841FCB53C1CB5 /* Pods-CoinPrices-Task.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		41DC00285E3044018BFDBB49 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E4455F86197850B806FDC906 /* Pods_CoinPrices_Task.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		84D639FA2A17E83000E2BE8D = {
 			isa = PBXGroup;
 			children = (
@@ -116,6 +134,8 @@
 				84D63A1B2A17E83400E2BE8D /* CoinPrices-TaskTests */,
 				84D63A252A17E83400E2BE8D /* CoinPrices-TaskUITests */,
 				84D63A042A17E83000E2BE8D /* Products */,
+				1BFBF5334461C3003F243BCB /* Pods */,
+				41DC00285E3044018BFDBB49 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -133,7 +153,6 @@
 			isa = PBXGroup;
 			children = (
 				84DD26F22A17EC42003C329A /* Extentions */,
-				84DD26F12A17EC38003C329A /* Utilities */,
 				84DD26EE2A17EBE8003C329A /* Presentation */,
 				84D63A352A17E8D800E2BE8D /* NetworkManager */,
 				84D63A0A2A17E83300E2BE8D /* Assets.xcassets */,
@@ -203,17 +222,8 @@
 			isa = PBXGroup;
 			children = (
 				84DD26FB2A17EE55003C329A /* HomeViewModel.swift */,
-				84DD27042A17EF9C003C329A /* CoinImageViewModel.swift */,
 			);
 			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		84DD26F12A17EC38003C329A /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-				84B54AD32A182ADC00493E7F /* LocalFileManager.swift */,
-			);
-			path = Utilities;
 			sourceTree = "<group>";
 		};
 		84DD26F22A17EC42003C329A /* Extentions */ = {
@@ -316,9 +326,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84D63A2C2A17E83400E2BE8D /* Build configuration list for PBXNativeTarget "CoinPrices-Task" */;
 			buildPhases = (
+				6AC75C365E69BBCC6F3790F4 /* [CP] Check Pods Manifest.lock */,
 				84D639FF2A17E83000E2BE8D /* Sources */,
 				84D63A002A17E83000E2BE8D /* Frameworks */,
 				84D63A012A17E83000E2BE8D /* Resources */,
+				E7ABA0FDC1038E111946ED7E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -434,6 +446,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6AC75C365E69BBCC6F3790F4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CoinPrices-Task-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E7ABA0FDC1038E111946ED7E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CoinPrices-Task/Pods-CoinPrices-Task-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CoinPrices-Task/Pods-CoinPrices-Task-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CoinPrices-Task/Pods-CoinPrices-Task-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		84D639FF2A17E83000E2BE8D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -446,14 +500,12 @@
 				84DD27032A17EF4C003C329A /* CoinImageView.swift in Sources */,
 				84DD270B2A17F2E0003C329A /* NativeRequestable.swift in Sources */,
 				84DD27162A17F504003C329A /* CoinsService.swift in Sources */,
-				84B54AD42A182ADC00493E7F /* LocalFileManager.swift in Sources */,
 				84D63A132A17E83300E2BE8D /* CoinPrices_Task.xcdatamodeld in Sources */,
 				84DD27192A17FB17003C329A /* PreviewProvider.swift in Sources */,
 				84DD271B2A17FB84003C329A /* Double.swift in Sources */,
 				84DD26FC2A17EE55003C329A /* HomeViewModel.swift in Sources */,
 				84DD26F62A17ECC0003C329A /* HomeView.swift in Sources */,
 				84DD26FA2A17EDC9003C329A /* CoinRowView.swift in Sources */,
-				84DD27052A17EF9C003C329A /* CoinImageViewModel.swift in Sources */,
 				84DD26FF2A17EEC9003C329A /* CoinModel.swift in Sources */,
 				84B54AD12A18058D00493E7F /* ContentView.swift in Sources */,
 				84DD26F82A17ED86003C329A /* Color.swift in Sources */,
@@ -611,6 +663,7 @@
 		};
 		84D63A2D2A17E83400E2BE8D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 05363A8996F8AEBD58D963BE /* Pods-CoinPrices-Task.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -640,6 +693,7 @@
 		};
 		84D63A2E2A17E83400E2BE8D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D682B04E14841FCB53C1CB5 /* Pods-CoinPrices-Task.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

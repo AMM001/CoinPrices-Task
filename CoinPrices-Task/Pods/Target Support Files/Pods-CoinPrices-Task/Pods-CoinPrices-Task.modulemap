@@ -1,0 +1,6 @@
+framework module Pods_CoinPrices_Task {
+  umbrella header "Pods-CoinPrices-Task-umbrella.h"
+
+  export *
+  module * { export * }
+}
