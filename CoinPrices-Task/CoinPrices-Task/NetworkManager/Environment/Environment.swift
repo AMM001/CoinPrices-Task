@@ -12,7 +12,7 @@ public enum Environment: String, CaseIterable {
 }
 
 extension Environment {
-    var purchaseServiceBaseUrl: String {
+    var serviceBaseUrl: String {
         switch self {
         case .development:
             return "https://api.coingecko.com/api/v3/coins/markets?vs_currency=brl&order=market_cap_desc&per_page=250&page=1&sparkline=true&price_change_percentage=24h"

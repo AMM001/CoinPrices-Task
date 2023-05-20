@@ -11,13 +11,10 @@ import Foundation
 protocol CoinsServiceable {
     func getCoins() -> AnyPublisher<[CoinModel], NetworkError>
     func getCoinImage(_ imageName:String) -> AnyPublisher<Data, NetworkError>
-
 }
 
 class CoinsService: CoinsServiceable {
-    
-    
-    
+
     private var networkRequest: Requestable
     private var environment: Environment = .development
     
@@ -38,7 +35,8 @@ class CoinsService: CoinsServiceable {
         let endpoint = ServiceEndpoints.getCoinImage(imageName)
         let request = endpoint.createRequest(token: "",
                                              environment: self.environment)
+        print("requestCoin******** \(request)")
+
         return self.networkRequest.request(request)
     }
-  
 }

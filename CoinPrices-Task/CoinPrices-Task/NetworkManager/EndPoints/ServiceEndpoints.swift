@@ -22,16 +22,18 @@ enum ServiceEndpoints {
   //specify the type of HTTP request
     var httpMethod: HTTPMethod {
         switch self {
-        case .getCoinsPrices , .getCoinImage:
+        case .getCoinsPrices:
+            return .GET
+        case .getCoinImage:
             return .GET
         }
     }
     
   // compose the NetworkRequest
     func createRequest(token: String, environment: Environment) -> NetworkRequest {
-        var headers: Headers = [:]
-        headers["Content-Type"] = "application/json"
-        headers["Authorization"] = "Bearer \(token)"
+        let headers: Headers = [:]
+//        headers["Content-Type"] = "application/json"
+//        headers["Authorization"] = "Bearer \(token)"
         return NetworkRequest(url: getURL(from: environment), headers: headers, reqBody: requestBody, httpMethod: httpMethod)
     }
     
@@ -45,7 +47,7 @@ enum ServiceEndpoints {
     
   // compose urls for each request
     func getURL(from environment: Environment) -> String {
-        let baseUrl = environment.purchaseServiceBaseUrl
+        let baseUrl = environment.serviceBaseUrl
         switch self {
         case .getCoinsPrices:
             return baseUrl

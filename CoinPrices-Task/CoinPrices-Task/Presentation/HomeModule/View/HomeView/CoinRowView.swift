@@ -49,15 +49,6 @@ extension CoinRowView {
         }
     }
     
-    private var centerColumn: some View {
-        VStack(alignment: .trailing) {
-            Text(coin.currentHoldingsValue.asCurrencyWith2Decimals())
-                .bold()
-            Text((coin.currentHoldings ?? 0).asNumberString())
-        }
-        .foregroundColor(Color.theme.accent)
-    }
-    
     private var rightColumn: some View {
         VStack(alignment: .trailing) {
             Text(coin.currentPrice.asCurrencyWith6Decimals())

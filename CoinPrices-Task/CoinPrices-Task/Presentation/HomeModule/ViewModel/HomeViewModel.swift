@@ -24,7 +24,9 @@ class HomeViewModel: ObservableObject {
         let service = CoinsService(networkRequest: NativeRequestable(), environment: .development)
         service.getCoins()
             .sink { (completion) in
-                self.isLoading = false
+                DispatchQueue.main.async {
+                    self.isLoading = false
+                }
                 switch completion {
                 case .failure(let error):
                     print("oops got an error \(error.localizedDescription)")
@@ -32,8 +34,10 @@ class HomeViewModel: ObservableObject {
                     print("nothing much to do here")
                 }
             } receiveValue: { (coinsModel) in
-                self.allCoins = coinsModel
-                print("got my response here \(coinsModel)")
+                DispatchQueue.main.async {
+                    self.allCoins = coinsModel
+                }
+              //  print("got my response here \(coinsModel)")
             }
             .store(in: &subscriptions)
     }

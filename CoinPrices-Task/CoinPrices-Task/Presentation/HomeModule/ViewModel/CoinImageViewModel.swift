@@ -15,16 +15,28 @@ class CoinImageViewModel: ObservableObject {
     @Published var isLoading: Bool = true
     
     private let coin: CoinModel
-    var subscriptions = Set<AnyCancellable>()
+    private let fileManager = LocalFileManager.instance
+    private let imageName: String
+    private let folderName = "coin_images"
+    
+    private var imageSubscription: AnyCancellable?
 
+
+
+    var subscriptions = Set<AnyCancellable>()
     
     init(coin: CoinModel) {
         self.coin = coin
-        self.addSubscribers()
-        self.isLoading = true
+        self.imageName = coin.id
+        
+        if let savedImage = fileManager.getImage(imageName: imageName, folderName: folderName) {
+            image = savedImage
+        } else {
+            downloadCoinImage()
+        }
     }
     
-    private func addSubscribers() {
+    private func downloadCoinImage() {
         self.isLoading = true
         let service = CoinsService(networkRequest: NativeRequestable(), environment: .development)
         service.getCoinImage(self.coin.image)
@@ -32,7 +44,9 @@ class CoinImageViewModel: ObservableObject {
                 return UIImage(data: data)
             })
             .sink { (completion) in
-                self.isLoading = false
+                DispatchQueue.main.async {
+                    self.isLoading = false
+                }
                 switch completion {
                 case .failure(let error):
                     print("oops got an error \(error.localizedDescription)")
@@ -41,9 +55,12 @@ class CoinImageViewModel: ObservableObject {
                 }
             } receiveValue: { (downloadedImage) in
                 self.image = downloadedImage
+                self.fileManager.saveImage(image: downloadedImage, imageName: self.imageName, folderName: self.folderName)
+
                 print("got my response here \(String(describing: downloadedImage))")
             }
             .store(in: &subscriptions)
     }
+    
 }
 

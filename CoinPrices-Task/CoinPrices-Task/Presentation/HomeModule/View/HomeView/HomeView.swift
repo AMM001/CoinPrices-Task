@@ -9,8 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     
-    @EnvironmentObject private var vm: HomeViewModel
-    @State private var showPortfolio: Bool = false
+  @EnvironmentObject private var vm: HomeViewModel
     
     let start = Date().addingTimeInterval(-30)
     let end = Date().addingTimeInterval(90)
